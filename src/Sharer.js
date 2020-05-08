@@ -17,7 +17,7 @@ function Sharer({ text, icon, shareTitle }) {
 		text: shareTitle
 	};
 
-	const handleToggle = async (e) => {
+	const toggleShare = async (e) => {
 		e.preventDefault();
 		// check state for fallback
 		if (fallback) {
@@ -36,7 +36,7 @@ function Sharer({ text, icon, shareTitle }) {
 
 	return (
 		<Fragment>
-			<div className="share-button-wrapper" onClick={handleToggle}>
+			<div className="share-button-wrapper" onClick={toggleShare}>
 				<div className="share-button-icon">{icon}</div>
 				<div className="share-button-text">{text}</div>
 			</div>
